@@ -1,9 +1,22 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
+    <RootNamespace>IngestForge.Workers</RootNamespace>
+    <AssemblyName>IngestForge.Workers</AssemblyName>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Confluent.Kafka" Version="2.6.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="8.0.2" />
+    <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="8.0.2" />
+    <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="8.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\IngestForge.Core\IngestForge.Core.csproj" />
+    <ProjectReference Include="..\IngestForge.Extractors\IngestForge.Extractors.csproj" />
+    <ProjectReference Include="..\IngestForge.Storage\IngestForge.Storage.csproj" />
+  </ItemGroup>
 
 </Project>
