@@ -1,0 +1,16 @@
+bin/
+obj/
+out/
+.vs/
+*.user
+*.suo
+.idea/
+.vscode/
+*.swp
+.DS_Store
+TestResults/
+coverage*.xml
+*.log
+docker-compose.override.yml
+.env
+.env.local
